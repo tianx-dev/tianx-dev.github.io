@@ -1,0 +1,3 @@
+baseURL = 'https://tianx-dev.github.io/'
+title = 'Hi'
+theme = 'ananke'
