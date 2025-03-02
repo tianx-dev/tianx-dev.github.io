@@ -45,7 +45,11 @@ jobs:
           extended: true  # Set to true if you're using Hugo Extended
 
       - name: Build
-        run: hugo --minify --baseURL="https://tianx-dev.github.io/"
+        run: |
+          echo "Building Hugo site..."
+          hugo --minify --baseURL="https://tianx-dev.github.io/"
+          echo "Listing public directory after build:"
+          ls -la public/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
