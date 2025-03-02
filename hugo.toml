@@ -1,3 +1,39 @@
 baseURL = 'https://tianx-dev.github.io/'
 title = 'Hi'
 theme = 'ananke'
+
+# Language and content configuration
+languageCode = 'en-us'
+defaultContentLanguage = 'en'
+
+# Enable GitHub Pages deployment
+publishDir = 'docs'
+
+# Enable permalinks
+[permalinks]
+  posts = '/:year/:month/:title/'
+
+# Site parameters
+[params]
+  description = "My personal website"
+  favicon = ""
+  site_logo = ""
+  # You can add social links here
+  # github = "https://github.com/tianx-dev"
+  # twitter = ""
+  # linkedin = ""
+  
+# Menu configuration
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 3
