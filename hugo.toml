@@ -56,9 +56,6 @@ minify = true
     imageTitle = "Tian X"
 
     [[params.profileMode.buttons]]
-      name = "Projects"
-      url = "/projects/"
-    [[params.profileMode.buttons]]
       name = "Blog"
       url = "/posts/"
     [[params.profileMode.buttons]]
@@ -114,11 +111,6 @@ minify = true
     name = "~/"
     url = "/"
     weight = 1
-  [[menu.main]]
-    identifier = "projects"
-    name = "projects"
-    url = "/projects/"
-    weight = 2
   [[menu.main]]
     identifier = "posts"
     name = "posts"
