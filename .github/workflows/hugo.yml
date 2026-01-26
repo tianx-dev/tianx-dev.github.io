@@ -26,9 +26,9 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.123.8'
+          hugo-version: 'latest'
           extended: true
 
       - name: Build
@@ -39,7 +39,7 @@ jobs:
           ls -la public/
           
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
