@@ -67,9 +67,6 @@ minify = true
     name = "github"
     url = "https://github.com/tianx-dev"
   [[params.socialIcons]]
-    name = "linkedin"
-    url = "https://linkedin.com/in/tianx"
-  [[params.socialIcons]]
     name = "email"
     url = "mailto:tianx.dev@gmail.com"
 
