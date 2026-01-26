@@ -1,39 +1,140 @@
 baseURL = 'https://tianx-dev.github.io/'
-title = 'Hi'
-theme = 'ananke'
+title = 'Tian X'
+theme = 'PaperMod'
 
-# Language and content configuration
 languageCode = 'en-us'
 defaultContentLanguage = 'en'
 
-# Enable GitHub Pages deployment
-publishDir = 'docs'
+# Build settings
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
 
-# Enable permalinks
+# Minify output
+minify = true
+
 [permalinks]
   posts = '/:year/:month/:title/'
 
-# Site parameters
 [params]
-  description = "My personal website"
-  favicon = ""
-  site_logo = ""
-  # You can add social links here
-  # github = "https://github.com/tianx-dev"
-  # twitter = ""
-  # linkedin = ""
-  
+  env = "production"
+  title = "Tian X"
+  description = "AI Infrastructure Engineer @ NVIDIA | Building the future of AI"
+  author = "Tian X"
+
+  # Dark mode by default (developer aesthetic)
+  defaultTheme = "dark"
+  disableThemeToggle = false
+
+  # Show reading time and word count
+  ShowReadingTime = true
+  ShowWordCount = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowShareButtons = false
+
+  # Homepage settings
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+
+  # Profile mode for homepage
+  [params.profileMode]
+    enabled = true
+    title = "Tian X"
+    subtitle = "AI Infrastructure @ NVIDIA | Building systems that scale AI"
+    imageUrl = "https://avatars.githubusercontent.com/u/1378013?v=4"
+    imageWidth = 140
+    imageHeight = 140
+    imageTitle = "Tian X"
+
+    [[params.profileMode.buttons]]
+      name = "Projects"
+      url = "/projects/"
+    [[params.profileMode.buttons]]
+      name = "Blog"
+      url = "/posts/"
+    [[params.profileMode.buttons]]
+      name = "About"
+      url = "/about/"
+
+  # Social icons
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/tianx-dev"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/tianx"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:tianx.dev@gmail.com"
+
+  # Home info mode (alternative to profile, keeping for reference)
+  [params.homeInfoParams]
+    Title = "Hey there"
+    Content = "AI Infrastructure Engineer passionate about building scalable AI systems"
+
+  # Search
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+  # Code highlighting
+  [params.assets]
+    disableHLJS = true
+
+[markup]
+  [markup.highlight]
+    style = "dracula"
+    lineNos = true
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    noClasses = true
+
+  [markup.goldmark.renderer]
+    unsafe = true
+
 # Menu configuration
 [menu]
   [[menu.main]]
-    name = "Home"
+    identifier = "home"
+    name = "~/"
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "About"
-    url = "/about/"
+    identifier = "projects"
+    name = "projects"
+    url = "/projects/"
     weight = 2
   [[menu.main]]
-    name = "Posts"
+    identifier = "posts"
+    name = "posts"
     url = "/posts/"
     weight = 3
+  [[menu.main]]
+    identifier = "about"
+    name = "about"
+    url = "/about/"
+    weight = 4
+  [[menu.main]]
+    identifier = "search"
+    name = "search"
+    url = "/search/"
+    weight = 5
+
+# Output formats for search
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
